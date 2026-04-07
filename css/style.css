@@ -1,0 +1,298 @@
+/* style.css */
+
+/* --- Reset some default styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+/* --- Header --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo img {
+    width: 80px; /* resized logo */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ff4500; /* highlight color */
+}
+
+/* --- Marquee --- */
+marquee {
+    background-color: #222;
+    color: #fff;
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.WelcomeBanner {
+    text-align: center;
+}
+
+.sort-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.sort-container button {
+    padding: 10px 18px;
+    margin: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sort-container button:hover {
+    background-color: #444;
+}
+
+/* --- Product Grid --- */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    padding: 15px 10px 5px 10px;
+    font-size: 18px;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #808080;
+}
+/**
+FORM
+**/
+
+form{
+    max-width:500px;
+    margin:40px auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    }
+    
+    input, textarea{
+    padding:10px;
+    border:1px solid #ccc;
+    }
+    
+    button{
+    padding:12px;
+    background:black;
+    color:white;
+    border:none;
+    cursor:pointer;
+    }
+    
+    button:hover{
+    background:#333;
+    }
+
+/* HOME PAGE */
+
+.home-title{
+    text-align:center;
+    margin:40px 0;
+    font-size:36px;
+    }
+    
+    .hero{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+    }
+    
+    .hero img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border-radius:8px;
+    }
+    
+    .home-info{
+    max-width:800px;
+    margin:40px auto;
+    text-align:center;
+    line-height:1.6;
+    }
+
+/* --- Footer --- */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 25px 50px;
+}
+
+footer .socials {
+    margin-top: 10px;
+}
+
+footer .socials a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+footer .socials a:hover {
+    color: #ff4500;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+/* EVENTS PAGE */
+
+.events-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    padding:40px;
+}
+
+.event-card{
+    background:white;
+    padding:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.event-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.event-card button{
+    margin-top:10px;
+    padding:10px;
+    background:black;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.event-card button:hover{
+    background:#333;
+}
+
+/* BOARD OF TRUSTEES */
+
+.trustees-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    padding:40px;
+    max-width:1100px;
+    margin:auto;
+    }
+    
+    .trustee-card{
+    background:white;
+    text-align:center;
+    padding:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    border-radius:8px;
+    }
+    
+    .trustee-card img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:10px;
+    }
